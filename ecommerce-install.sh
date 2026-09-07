@@ -17,7 +17,7 @@ echo "=========================================="
 # 1. UPDATE AMAZON LINUX
 # ============================================================
 
-dnf update -y
+sudo dnf update -y
 
 
 # ============================================================
@@ -26,12 +26,7 @@ dnf update -y
 
 echo "Installing Apache, PHP, MariaDB and utilities..."
 
-dnf install -y \
-    httpd \
-    php \
-    php-mysqli \
-    mariadb105-server \
-    curl
+sudo dnf install -y httpd php php-mysqli mariadb105-server
 
 
 # ============================================================
