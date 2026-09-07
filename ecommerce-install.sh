@@ -35,13 +35,13 @@ sudo dnf install -y httpd php php-mysqli mariadb105-server
 
 echo "Starting Apache..."
 
-systemctl enable httpd
-systemctl start httpd
+sudo systemctl enable httpd
+sudo systemctl start httpd
 
 echo "Starting MariaDB..."
 
-systemctl enable mariadb
-systemctl start mariadb
+sudo systemctl enable mariadb
+sudo systemctl start mariadb
 
 
 # ============================================================
@@ -50,7 +50,7 @@ systemctl start mariadb
 
 echo "Creating e-commerce database..."
 
-mariadb <<'SQL'
+sudo mariadb <<'SQL'
 
 CREATE DATABASE IF NOT EXISTS ecommerce;
 
